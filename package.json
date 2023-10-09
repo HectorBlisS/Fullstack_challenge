@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "deploy": "netlify deploy --build --prod",
-    "build": "npm run build:tailwind && remix build",
+    "build": "npm run build:tailwind",
     "dev": "npx concurrently \"remix dev --manual\" \"npm run dev:tailwind\" ",
     "postinstall": "npx prisma generate",
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc",
     "dev:tailwind": "npx tailwindcss -w -i tailwind.css -o app/styles/style.css",
-    "build:tailwind": "npx tailwindcss -m -i tailwind.css -o app/styles/style.css"
+    "build:tailwind": "npx tailwindcss -m -i tailwind.css -o app/styles/style.css && remix build"
   },
   "dependencies": {
     "@netlify/functions": "^1.6.0",
