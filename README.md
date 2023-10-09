@@ -1,38 +1,19 @@
-# Welcome to Remix!
+## Fullstack Challenge
 
-- [Remix Docs](https://remix.run/docs)
+I decided to use **Remix**, because I have both sides of the app (backend, frontend) in the same project and even the same file.
 
-## Development
+I used **MongoDB** as a cloud database. At the beginning, I wanted to use **SQLite**, but I wanted to deploy it, so a cloud DB was needed.
 
-From your terminal:
+## Features
 
-```sh
-npm run dev
-```
+- You can list all the tasks
 
-This starts your app in development mode, rebuilding assets on file changes.
+- You can filter'em by assignee
 
-## Deployment
+- You can select a second filter to download by today, tomorrow or next week
 
-First, build your app for production:
+- You can download CSV or open the JSON URL.
 
-```sh
-npm run build
-```
+## Missing time 🫥
 
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+I'd like to change my approach a bit, by using URL as state, because I experimented a bit with the JSON route and regret some pattern decisions, but I had a lack of time. 🥲 Even tho, I feel good about what I came up with.
