@@ -17,3 +17,7 @@ I used **MongoDB** as a cloud database. At the beginning, I wanted to use **SQLi
 ## Missing time 🫥
 
 I'd like to change my approach a bit, by using URL as state, because I experimented a bit with the JSON route and regret some pattern decisions, but I had a lack of time. 🥲 Even tho, I feel good about what I came up with.
+
+## Future deployment
+
+[http://challenge.hectorbliss.com/](http://challenge.hectorbliss.com/)
