@@ -4,19 +4,28 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev --manual",
+    "deploy": "netlify deploy --build --prod",
+    "build": "npm run build:tailwind && remix build",
+    "dev": "npx concurrently \"remix dev --manual\" \"npm run dev:tailwind\" ",
+    "postinstall": "npx prisma generate",
     "start": "remix-serve ./build/index.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "dev:tailwind": "npx tailwindcss -w -i tailwind.css -o app/styles/style.css",
+    "build:tailwind": "npx tailwindcss -m -i tailwind.css -o app/styles/style.css"
   },
   "dependencies": {
+    "@prisma/client": "^5.4.1",
     "@remix-run/css-bundle": "^2.0.1",
     "@remix-run/node": "^2.0.1",
     "@remix-run/react": "^2.0.1",
     "@remix-run/serve": "^2.0.1",
+    "@tailwindcss/forms": "^0.5.6",
+    "framer-motion": "^10.16.4",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.0.1",
@@ -24,6 +33,7 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "eslint": "^8.38.0",
+    "prisma": "^5.4.1",
     "typescript": "^5.1.6"
   },
   "engines": {
