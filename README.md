@@ -1,3 +1,11 @@
+## How to run
+
+Node >=18
+
+```
+npm i && npm run dev
+```
+
 ## Fullstack Challenge
 
 I decided to use **Remix**, because I have both sides of the app (backend, frontend) in the same project and even the same file.
